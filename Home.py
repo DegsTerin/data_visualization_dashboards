@@ -23,12 +23,12 @@ st.cache_data.clear()
 @st.cache_data
 def load_data():
     # URL (production / GitHub)
-    # return pd.read_csv(
-    #     "https://raw.githubusercontent.com/DegsTerin/Dashboard/refs/heads/main/Salaries.csv"
-    # )
+    return pd.read_csv(
+        "https://raw.githubusercontent.com/DegsTerin/Dashboard/refs/heads/main/Data/Salaries.csv"
+    )
 
     # LOCAL (uncomment for local testing)
-    return pd.read_csv("data/salaries.csv")
+    #return pd.read_csv("data/salaries.csv")
 
 df = load_data()
 
@@ -289,4 +289,5 @@ with st.expander("ℹ️ About the Dashboard"):
     • Values expressed in annual USD
     • Outliers removed at the 99th percentile for visualization only
     • Comparisons based on average and median
+
     """)
